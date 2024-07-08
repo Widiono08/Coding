@@ -6,78 +6,36 @@
 .mt30 {
     margin-top: 80px;
 }
+
 .mt-10 {
     margin-top: -10px;
 }
+
 .container {
     font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
 }
+
 .judul {
     text-align: center;
 }
 
-.row {
+.row, .row1, .row2, .row3, .row4, .row5, .row6 {
     display: flex;
     flex-direction: row;
-}
-.desc {
-    margin-right: 1100px;
-}
-.desc1 {
-    margin-right: 85px;
-}
-.desc2 {
-    margin-left: 10px;
+    justify-content: space-between;
 }
 
-.row1 {
-    display: flex;
-    flex-direction: row;
-}
-.desc3 {
-    margin-right: 1083px;
-}
-.desc4 {
-    margin-right: 72px;
-}
-.desc5 {
-    margin-left: 10px;
+.desc, .desc3, .desc6 {
+    flex: 1;
 }
 
-.row2 {
-    display: flex;
-    flex-direction: row;
-}
-.desc6 {
-    margin-right: 1176px;
-}
-.desc7 {
-    margin-right: 30px;
-}
-.desc8 {
-    margin-left: 10px;
+.desc1, .desc4, .desc7 {
+    flex: 0 0 10%;
 }
 
-.row3 {
-    display: flex;
-    flex-direction: row;
-}
-.desc9 {
-    margin-right: 39px;
-}
-.desc10 {
-    margin-left: 10px;
-}
-
-.row4 {
-    display: flex;
-    flex-direction: row;
-}
-.desc11 {
-    margin-right: 20px;
-}
-.desc12 {
-    margin-left: 10px;
+.desc2, .desc5, .desc8 {
+    flex: 0 0 20%;
 }
 
 .table table {
@@ -86,35 +44,47 @@
     width: 100%;
     text-align: center;
 }
+
 .table th, .table td {
     border: 2px solid black;
 }
+
 .line {
     border-bottom: 4px solid;
 }
 
-.desc13 {
-    margin-left: 150px;
+.row5, .row6 {
+    justify-content: space-between;
 }
 
-.row5 {
-    display: flex;
-    flex-direction: row;
-}
-.desc13 {
-    margin-left: 500px;
-}
-.desc14 {
-    margin-left: 530px;
+.desc13, .desc15 {
+    flex-wrap: wrap ;
 }
 
-.row6 {
-    display: flex;
-    flex-direction: row;
+.desc14, .desc16 {
+    flex-wrap: wrap;
 }
-.desc15 {
-    margin-left: 479px;
-}
-.desc16 {
-    margin-left: 525px;
+
+@media (min-width: 2000px) {
+    .row, .row1, .row2, .row3, .row4, .row5, .row6 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .desc, .desc1, .desc2, .desc3, .desc4, .desc5, .desc6, .desc7, .desc8, .desc9, .desc10, .desc11, .desc12 {
+        margin: 5px 0;
+    }
+
+    .table table {
+        font-size: 14px;
+    }
+
+    .desc13, .desc15 {
+        margin-left: 0;
+    }
+
+    .desc14, .desc16 {
+        margin-right: 0;
+        align-self: flex-end;
+    }
 }
